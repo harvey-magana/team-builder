@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../App.css';
 
-const TeamForm = () => {
+const TeamForm = (props) => {
   const [ members, setMembers ] = useState({
       name: '', 
       email: '', 
@@ -17,8 +17,8 @@ const TeamForm = () => {
 
   const submitForm = (event) => {
     event.preventDefault();
-    console.log("This works...");
-
+    console.log(props);
+    props.addNewMember(members);
   }
 
   return (
@@ -36,7 +36,7 @@ const TeamForm = () => {
                 Role:
                 <input name="role" onChange={onLineChange} />
             </label>
-            <button>Submit</button>
+            <button type="submit">Submit</button>
         </form>
     </div>
   );
