@@ -8,9 +8,20 @@ function App() {
     {
       id: 1, 
       name: "Jeff", 
+      email: "jeff@lebowsky.com",
       role: "Actor"
     }
   ])
+
+  const addNewMember = team => {
+    const newMember = {
+      id: Date.now(),
+      name: team.name, 
+      email: team.email, 
+      role: team,role
+    }
+    setTeams([...teams, newMember])
+  }
 
   return (
     <div className="App">
