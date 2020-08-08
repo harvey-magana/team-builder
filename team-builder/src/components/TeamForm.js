@@ -1,10 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../App.css';
 
 const TeamForm = () => {
   return (
     <div className="App">
-        I am the Teeam Form.
+        <form>
+            <label>
+                Name:
+                <input />
+            </label>
+            <label>
+                Email:
+                <input />
+            </label>
+            <label>
+                Role:
+                <input />
+            </label>
+        </form>
     </div>
   );
 }
