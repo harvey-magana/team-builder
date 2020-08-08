@@ -8,6 +8,13 @@ const TeamForm = () => {
       role: '',
   })
 
+  const onLineChange = event => {
+      setMembers({
+          ...members, 
+          [event.target.name]: event.target.value
+      })
+  }
+
   return (
     <div className="App">
         <form>
