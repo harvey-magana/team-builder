@@ -2,6 +2,12 @@ import React, { useState } from 'react';
 import '../App.css';
 
 const TeamForm = () => {
+  const [ members, setMembers ] = useState({
+      name: '', 
+      email: '', 
+      role: '',
+  })
+
   return (
     <div className="App">
         <form>
