@@ -20,15 +20,15 @@ const TeamForm = () => {
         <form>
             <label>
                 Name:
-                <input />
+                <input name="name" onchange={onLineChange} />
             </label>
             <label>
                 Email:
-                <input />
+                <input name="email" onchange={onLineChange} />
             </label>
             <label>
                 Role:
-                <input />
+                <input name="role" onchange={onLineChange} />
             </label>
         </form>
     </div>
