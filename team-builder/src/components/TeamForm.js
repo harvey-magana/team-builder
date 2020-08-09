@@ -2,6 +2,13 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import '../App.css';
 
+const Form = styled.form`
+	color: palevioletred;
+    display: block;
+	width: 300px;
+	margin: 50px auto;
+`;
+
 const FormGroup = styled.div`
 	color: palevioletred;
     display: block;
@@ -15,7 +22,6 @@ const Label = styled.label`
     display: block;
 `;
 
-
 const Input = styled.input`
 	padding: 0.5em;
 	color: palevioletred;
@@ -26,18 +32,9 @@ const Input = styled.input`
 	margin-bottom: 0.5em;
 `;
 
-const Message = styled.label`
-	margin-bottom: 0.5em;
-	color: palevioletred;
-    display: block;
-`;
-
 const Button = styled.button`
-  /* Adapt the colors based on primary prop */
-  background: ${props => props.primary ? "palevioletred" : "white"};
-  color: ${props => props.primary ? "white" : "palevioletred"};
-
   font-size: 1em;
+  margin: 1em;
   padding: 0.25em 1em;
   border: 2px solid palevioletred;
   border-radius: 3px;
@@ -59,22 +56,23 @@ const TeamForm = (props) => {
 
   const submitForm = (event) => {
     event.preventDefault();
-    console.log(props);
-    props.addNewMember(members);
+    console.log("This works...");
+    props.addNewMember(members)
   }
 
   return (
     <div className="App">
-        <FormGroup onSubmit={submitForm}>
-        <Label htmlFor="label">Name</Label>
-        <Input id="label" name="name" onChange={onLineChange} />
-        <Label>Email</Label>
-        <Input name="email" onChange={onLineChange} />
-        <Label>Role</Label>
-        <Input name="role" onChange={onLineChange} />
-        <Message>This is the validation message</Message>
-        <Button type="submit" primary>Primary</Button>
-        </FormGroup>
+        <Form onSubmit={submitForm}>
+            <FormGroup>
+                <Label htmlFor="label">Name:</Label>
+                <Input id="label" name="name" onChange={onLineChange} />
+                <Label htmlFor="label">Email:</Label>
+                <Input id="label" name="email" onChange={onLineChange} />
+                <Label htmlFor="label">Role:</Label>
+                <Input id="label" name="role" onChange={onLineChange} />
+                <Button primary>Primary</Button>
+            </FormGroup>
+        </Form>
     </div>
   );
 }

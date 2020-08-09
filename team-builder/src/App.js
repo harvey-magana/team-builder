@@ -26,7 +26,6 @@ function App() {
   return (
     <div className="App">
         <TeamForm addNewMember={addNewMember} />
-        {console.log(teams)}
         <TeamDisplay teams={teams} />
     </div>
   );
