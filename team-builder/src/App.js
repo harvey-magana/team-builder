@@ -7,9 +7,9 @@ function App() {
   const [ teams, setTeams ] = useState([
     {
       id: 1, 
-      name: "Jeff", 
-      email: "jeff@lebowsky.com",
-      role: "Actor"
+      name: "", 
+      email: "",
+      role: ""
     }
   ])
 
@@ -26,6 +26,7 @@ function App() {
   return (
     <div className="App">
         <TeamForm addNewMember={addNewMember} />
+        {console.log(teams)}
         <TeamDisplay teams={teams} />
     </div>
   );
