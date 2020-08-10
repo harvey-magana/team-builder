@@ -3,14 +3,14 @@ import styled from 'styled-components';
 import '../App.css';
 
 const Form = styled.form`
-	color: palevioletred;
+	color: #2196f3;
     display: block;
 	width: 300px;
 	margin: 50px auto;
 `;
 
 const FormGroup = styled.div`
-	color: palevioletred;
+	color: #2196f3;
     display: block;
 	width: 300px;
 	margin: 50px auto;
@@ -18,13 +18,13 @@ const FormGroup = styled.div`
 
 const Label = styled.label`
 	margin-bottom: 0.5em;
-	color: palevioletred;
+	color: #2196f3;
     display: block;
 `;
 
 const Input = styled.input`
 	padding: 0.5em;
-	color: palevioletred;
+	color: #2196f3;
 	background: papayawhip;
 	border: none;
 	border-radius: 3px;
@@ -36,7 +36,7 @@ const Button = styled.button`
   font-size: 1em;
   margin: 1em;
   padding: 0.25em 1em;
-  border: 2px solid palevioletred;
+  border: 2px solid #2196f3;
   border-radius: 3px;
 `;
 
